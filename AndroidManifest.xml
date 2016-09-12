@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="de.benibela.myandroid"
+      android:versionCode="1850"
+      android:versionName="1.850">
+    <!--<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:anyDensity="true" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14" />
+    <application android:label="@string/app_name"
+        android:icon="@android:drawable/ic_menu_manage"
+
+        android:name=".MyAndroidApp"
+    >
+        <!--android:theme="@style/Theme.myandroid"-->
+        <activity android:name=".MyAndroidActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".BeeperActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"/>
+
+        <activity android:name=".SoDebuggerActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"/>
+
+    </application>
+
+
+</manifest> 

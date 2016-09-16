@@ -26,12 +26,17 @@
 
         <activity android:name=".BeeperActivity"
                   android:configChanges="orientation|keyboardHidden"
-                  android:label="@string/app_name"
+                  android:label="Beeper"
                   android:launchMode="singleTop"/>
 
         <activity android:name=".SoDebuggerActivity"
                   android:configChanges="orientation|keyboardHidden"
-                  android:label="@string/app_name"
+                  android:label="SO Debugger"
+                  android:launchMode="singleTop"/>
+
+        <activity android:name=".EyeTestActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="Eye Test"
                   android:launchMode="singleTop"/>
 
     </application>

@@ -24,7 +24,7 @@ public class MyAndroidBaseActivity extends SherlockActivity   {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
-        //getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     @Override

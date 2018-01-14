@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="de.benibela.myandroid"
-      android:versionCode="1850"
-      android:versionName="1.850">
+      android:versionCode="2000"
+      android:versionName="2.0">
+    <uses-permission android:name="android.permission.INTERNET" />
     <!--<uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
@@ -12,6 +13,9 @@
         android:icon="@android:drawable/ic_menu_manage"
 
         android:name=".MyAndroidApp"
+
+
+        android:theme="@style/Theme.AppCompat.Light"
     >
         <!--android:theme="@style/Theme.myandroid"-->
         <activity android:name=".MyAndroidActivity"

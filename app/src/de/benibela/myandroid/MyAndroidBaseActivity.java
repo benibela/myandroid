@@ -1,25 +1,17 @@
 package de.benibela.myandroid;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import com.actionbarsherlock.app.*;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuInflater;
 
-public class MyAndroidBaseActivity extends SherlockActivity   {
+public class MyAndroidBaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,19 +36,17 @@ public class MyAndroidBaseActivity extends SherlockActivity   {
         super.onDestroy();
     }
 
-
-    public boolean onOptionsItemSelected(Activity context, MenuItem item) {
-        return onOptionsItemIdSelected(context, item.getItemId());
-    }
-    public boolean onOptionsItemIdSelected(Activity context, int id) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
         // Handle item selection
         Intent intent;
         switch (id) {
             case  android.R.id.home:
                 configSaveAll();
-                intent = new Intent(context, MyAndroidActivity.class);
+                intent = new Intent(this, MyAndroidActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                context.startActivity(intent);
+                this.startActivity(intent);
                 return true;
         }
         return false;

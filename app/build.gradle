@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android
+{
+  compileSdkVersion 25
+  buildToolsVersion "25.0.3"
+  useLibrary 'org.apache.http.legacy'
+
+  defaultConfig
+  {
+    minSdkVersion 9
+    targetSdkVersion 25
+  }
+
+  sourceSets {
+     main {
+        manifest.srcFile 'AndroidManifest.xml'
+        java.srcDirs = ['src']
+        resources.srcDirs = ['src']
+        aidl.srcDirs = ['src']
+        renderscript.srcDirs = ['src']
+        res.srcDirs = ['res']
+        assets.srcDirs = ['assets']
+        jni.srcDirs = []
+        jniLibs.srcDirs = ['libs']
+     }
+  }
+  
+  signingConfigs {
+    release {
+      storeFile file('/home/benito/hg/information/android.keystore')
+      storePassword ANDROID_STORE_PASSWORD
+      keyAlias 'videlibri'
+      keyPassword ANDROID_KEY_PASSWORD
+    }
+  }
+  buildTypes {
+    release {
+      signingConfig signingConfigs.release
+    }
+    debug {
+      applicationIdSuffix '.debug'
+      manifestPlaceholders = [ applicationLabel: "Debug" ]
+    }
+  }
+
+}
+
+
+repositories {
+/*  jcenter()*/
+  maven {
+    url "https://maven.google.com"
+  }
+  mavenCentral()
+}
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.+'
+/*    compile 'com.android.support:design:25.+'
+    compile 'com.android.support:preference-v7:25.+'*/
+/*    compile fileTree(dir: 'libs', include: ['*.jar'])*/
+}

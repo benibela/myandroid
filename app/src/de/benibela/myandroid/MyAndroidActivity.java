@@ -9,16 +9,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.WindowManager;
-import android.widget.*;
-
-import android.widget.EditText;
-import com.actionbarsherlock.app.*;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuInflater;
 
 import java.lang.InternalError;
 import java.lang.Override;

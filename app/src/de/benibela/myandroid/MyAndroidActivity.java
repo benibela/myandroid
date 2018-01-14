@@ -47,6 +47,14 @@ public class MyAndroidActivity extends MyAndroidBaseActivity  {
                     }
                 }
         );
+        findButtonById(R.id.buttonHttp).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        MyAndroidActivity.this.startActivity(new Intent(MyAndroidActivity.this, HTTPActivity.class));
+                    }
+                }
+        );
 
     }
 }

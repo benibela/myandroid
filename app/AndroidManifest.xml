@@ -39,9 +39,14 @@
                   android:launchMode="singleTop"/>
 
         <activity android:name=".EyeTestActivity"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:label="Eye Test"
-                  android:launchMode="singleTop"/>
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Eye Test"
+            android:launchMode="singleTop"/>
+
+        <activity android:name=".HTTPActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="HTTP"
+            android:launchMode="singleTop"/>
 
     </application>
 
